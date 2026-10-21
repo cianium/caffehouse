@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --espresso-dark: #160D0B;
+    --espresso: #2B1B16;
+    --chocolate: #3C2922;
+    --mocha: #63473A;
+    --caramel: #C68A52;
+    --latte: #E2B88F;
+    --cream: #F3DDC4;
+    --turquoise: #78BDB6;
+    --turquoise-glow: rgba(120, 189, 182, 0.4);
+  }
+
+  body {
+    font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+    background-color: #160E0B;
+    color: #F3DDC4;
+    overflow-x: hidden;
+    direction: rtl;
+    text-align: right;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Vazirmatn', 'Unbounded', sans-serif;
+  }
+}
+
+/* Custom scrollbar for dark luxury feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #160D0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #3C2922;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C68A52;
+}
+
+/* Atmospheric Noise Texture Overlay */
+.noise-bg {
+  background-image: radial-gradient(rgba(198, 138, 82, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Vignette effect */
+.radial-vignette {
+  background: radial-gradient(circle at 50% 40%, rgba(60, 41, 34, 0.4) 0%, rgba(22, 13, 11, 0.95) 75%);
+}
+
+.glow-caramel {
+  filter: drop-shadow(0 0 25px rgba(198, 138, 82, 0.35));
+}
+
+.glow-turquoise {
+  box-shadow: 0 0 30px rgba(120, 189, 182, 0.35);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(43, 27, 22, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 184, 143, 0.12);
+}
+
+.glass-pill {
+  background: rgba(28, 17, 14, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 184, 143, 0.18);
+}
+
+/* Film Grain Overlay */
+.cinematic-film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
+  animation: grainJitter 0.5s steps(3) infinite;
+}
+
+@keyframes grainJitter {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2px, 3px); }
+  50% { transform: translate(3px, -2px); }
+  75% { transform: translate(-3px, -1px); }
+  100% { transform: translate(1px, 2px); }
+}
+
+/* Cinematic Bloom Overlay */
+.cinematic-bloom-layer {
+  background: radial-gradient(circle at 75% 25%, rgba(120, 189, 182, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 25% 75%, rgba(198, 138, 82, 0.1) 0%, transparent 60%);
+  mix-blend-mode: screen;
+}

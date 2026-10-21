@@ -1,0 +1,6 @@
+{
+  "name": "BODRIN — 3D Coffee Experience",
+  "description": "تجربه سینمایی و سه‌بعدی قهوه تخصصی بودرین (BODRIN) با منوی حرفه‌ای، تسویه حساب آنلاین، پنل مدیریت محتوا، سفارش سریع و طراحی شخصی‌سازی کمربند کاپ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
